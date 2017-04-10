@@ -1,7 +1,6 @@
 'use strict'
 
 $(function () {
-
 	var socket = io();
 
     var data = {
@@ -20,6 +19,7 @@ $(function () {
     }
 
 	var ctx = document.getElementById("myChart").getContext('2d');
+    
 	var myChart = new Chart(ctx,{
         type: 'line',
         data: data,

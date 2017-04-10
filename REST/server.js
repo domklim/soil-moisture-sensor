@@ -1,4 +1,3 @@
-
 var express = require('express')
     , bodyParser = require('body-parser')
     , logger = require('morgan')
@@ -64,7 +63,6 @@ app.get('/', (req, res) => {
 app.post('/value', (req, res) => {
 	let bodyId = req.body.id;
 	let bodyValue = req.body.value;
-	console.log('bodyValue', bodyValue, 'bodyId', bodyId);
 	if(!bodyId || !bodyValue){
 		res.writeHead(400, {
 			'content-type': 'text/plain'
@@ -131,7 +129,6 @@ app.get('/all', (req, res) => {
 
 app.delete('/all', (req, res) => {
 	chartdata.deleteAll(valueModel, res);
-	console.log('Data deleted');
 })
 
 io.on('connection', (socket) => {
