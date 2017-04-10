@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+   <title>Plant moisture</title>
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+   <script src="app.js"></script>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+ 
+<body>
+<span class="clock"> &nbsp;</span>
+<div class="flex-container">
+   <div id="canvas">
+       <canvas id="myChart" width="650" height="550"></canvas>
+   </div>
+    <div id="plant-cont">
+      <div id="pot">
+    	  <img src="pot_500.png">
+    	</div>
+    	<div id="leaves">
+    	  <img src="./leaves_500.png">
+      </div>
+    </div>
+</div>
+</body>
+</html>
