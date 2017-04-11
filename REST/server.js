@@ -7,9 +7,8 @@ var express = require('express')
     , cors = require('cors')
     , methodOverride = require('method-override')
     , path = require('path')
-    , cfg = require('./cfg')
-    , chartdata = require('./chartdata');
-
+    , cfg = require('./cfg');
+    
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
@@ -122,14 +121,6 @@ app.post('/value', (req, res) => {
 		});
 	}
 });
-
-app.get('/all', (req, res) => {
-	chartdata.list(valueModel, res);
-});
-
-app.delete('/all', (req, res) => {
-	chartdata.deleteAll(valueModel, res);
-})
 
 io.on('connection', (socket) => {
 	console.log('Socket connection ');
