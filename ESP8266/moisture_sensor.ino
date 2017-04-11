@@ -3,8 +3,8 @@
 #include <WiFiUdp.h>
 #include <TimeLib.h>
 
-const char *ssid = "Orange-A67C";
-const char *pass = "33385907";
+const char *ssid = "";
+const char *pass = "";
 
 const int AnalogIn  = A0;
 int readSensor;
@@ -19,9 +19,7 @@ void sendNTPpacket(IPAddress &address);
 
 HTTPClient http;
 
-void setup(){
-  pinMode(0, OUTPUT);
-  
+void setup(){  
   Serial.begin(115200);
   Udp.begin(localPort);
   Serial.print("Local port: ");
