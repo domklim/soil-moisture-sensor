@@ -18,7 +18,7 @@ $(function () {
         data.datasets[0].data[i] = 0;
     }
 
-	var ctx = document.getElementById("myChart").getContext('2d');
+	var ctx = var ctx = $("#myChart")[0].getContext('2d');
     
 	var myChart = new Chart(ctx,{
         type: 'line',
