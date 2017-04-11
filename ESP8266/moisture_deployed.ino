@@ -32,15 +32,11 @@ void setup(){
     Serial.print(".");
     delay(500);
     WiFi.begin(ssid, pass);
-    if(WiFi.waitForConnectResult() != WL_CONNECTED) {
-      return;
-    }
   }
 
   if(WiFi.status() == WL_CONNECTED) {
     Serial.println('WiFi connected');
     delay(1000);
-
   }
 }
 
