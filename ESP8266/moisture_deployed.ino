@@ -58,9 +58,9 @@ void loop() {
     
     http.begin("http://mintsensor.herokuapp.com/value/");
     http.addHeader("content-type", "application/json");
-    char buffer[100];
-    char bufID[16];
-    char bufVal[16];
+    char buffer[32];
+    char bufID[sizeof(hours)+1];
+    char bufVal[sizeof(readSensor)+1];
     sprintf(bufID, "%d", hours);
     sprintf(bufVal, "%d", readSensor);
     strcat(buffer, "{\"value\": \"");

@@ -1,3 +1,3 @@
 module.exports = {
-	'uri': 'mongodb://chart:chartDB@ds155490.mlab.com:55490/chartdb'
+	'uri': 'mongodb://<user>:<user_pw>@ds155490.mlab.com:55490/chartdb'
 }
